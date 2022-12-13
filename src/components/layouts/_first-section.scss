@@ -1,0 +1,37 @@
+@use './../../scss/' as *;
+    .first-section {
+        max-width: 490px;
+        background-image:  url('../../assets/images/items/tiendaOnline.png');
+        border-radius: 350px;
+        padding: 52px 60px 52px 60px;
+        height: 490px;
+        margin-left: auto;
+        margin-top: 40px;
+        box-shadow: 40px 20px 25px 20px rgba(152, 47, 251, 0.2);
+
+        @include tablet {
+            margin-right: auto;
+        }
+
+        @include mobile {
+            background-image:  url('../../assets/images/items/tiendaOnlineMovil.png');
+            padding: 52px 20px 52px 20px;
+            border-radius: 500px;
+            max-width: 350px;
+            height: 350px;
+
+        }
+    }
+    
+   
+
+    .button-action {
+        margin-top: 40px;
+
+        .style-2.btn-action {
+            padding: 15px 41px;
+        }
+    }
+
+      
+      
