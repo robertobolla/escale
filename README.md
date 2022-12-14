@@ -1,3 +1,11 @@
+"ESCALE" is a website created with react, with the aim of selling websites and ecommerces.
+
+to contact me you can do it:
+
+info@robertobolla.com
+https://www.linkedin.com/in/robertobolla/
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
