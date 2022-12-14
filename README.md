@@ -1,4 +1,4 @@
-"ESCALE" is a website created with react, with the aim of selling websites and ecommerces.
+"ESCALE" is a website created with HTML,CSS, SASS, react, with the aim of selling websites and ecommerces.
 
 to contact me you can do it:
 
