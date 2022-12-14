@@ -1,10 +1,16 @@
+## Description
+
 "ESCALE" is a website created with HTML,CSS, SASS and Reactjs, with the aim of selling websites and ecommerces.
 
-to contact me you can do it:
+## AUTOR
+**Roberto Bolla**
 
-info@robertobolla.com
-https://www.linkedin.com/in/robertobolla/
+* [LinkedIn] (https://www.linkedin.com/in/robertobolla/)
+* [portfolio] (https://robertobolla.com/)
 
+## Hiring
+
+If you want to hire me you can write to info@robertobolla.com for consultations.
 
 # Getting Started with Create React App
 
