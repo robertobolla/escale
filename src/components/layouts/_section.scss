@@ -1,9 +1,11 @@
 @use './../../scss/' as *;
 .hero-slider {
+    margin-top: 100px;
     padding: 85px 0;
     @include tablet {
         padding: 0;
-    }
+    } 
+   
 
     &.style-2 {
         padding: 116px 0 327px;
@@ -17,26 +19,132 @@
 }
 
 .home-3 .hero-slider {
-    padding: 69px 0;
+    padding: 0px 0;
+    @include tablet {
+        margin-top: 40px;
+    }
+    @include mobile {
+        margin-top: 100px;
+    }
+}
+.column-up {
+    @include mobile {
+    margin-top: -330px;
+    margin-left: 30px;
+    }
 }
 
 .section-about {
+    margin-top: 0px;
     padding: 170px 0;
     @include tablet {
-        padding: 100px 0;
+        margin-top: 400px;
+        padding: 100px 0;    
+        margin-left: auto;
+        margin-right: auto;   
+        margin-bottom: -100px;
     }
-    .group-image {
+    @include mobile {  
+        margin-bottom: 0;
+        margin-left: 0px;
+        margin-right: 0;
+        padding-bottom: 0;
+        width: 100vw;
+    }
+    .block-text{
+        padding-left: 15px;
+        @include mobile {
+            margin-top: -100px;  
+            padding-left: 0; 
+            }
+        .sub-title {
+            &::after {
+                left: 0%;
+                @include mobile {
+                    left: 47%;
+                }        
+    }}}
+    .group-image {    
+        padding-top: 140px;          
+        margin-left: -70px;
         display: flex;
         align-items: center;
-
-        @include tablet {
-            padding-top: 50px;
+        transform: scale(0.7);
+        @include tablet { 
+            padding-top: 0;         
+            transform: scale(0.8);
+            margin-left: auto;
+            margin-right: auto;        }
+        @include mobile {          
+           transform: scale(0.6);
+           margin-left: -130px;          
+           margin-top: 60px;
+           margin-right: 0px;
+           margin-bottom: -300px;           
         }
+        .left {
+            margin-right: 30px;
+
+            @include mobile {
+                margin-bottom: 30px;
+                margin-right: 0;
+            }
+        }
+        .right .item:nth-child(1) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.section-responsive {
+    margin-top: 0px;
+    padding: 170px 0;
+    @include tablet {
+        margin-top: 400px;
+        padding: 100px 0;    
+        margin-left: auto;
+        margin-right: auto;   
+        margin-bottom: -100px;
+    }
+    @include mobile {        
+        margin-bottom: -150px;
+        margin-left: 0px;
+        margin-right: 0;
+        padding-bottom: 0;
+        margin-top: 270px;
+        width: 92vw;
+    }
+    .block-text{
+        padding-left: 15px;
         @include mobile {
-            flex-wrap: wrap;
-            justify-content: space-around; 
+            padding-left: 22px;
         }
-
+        .sub-title {
+            &::after {
+                left: 0%;
+                @include mobile {
+                    left: 46%;
+                }
+    }}}
+    .group-image {    
+        padding-top: 100px;          
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        transform: scale(0.7);
+        @include tablet { 
+            padding-top: 0;         
+            transform: scale(0.8);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include mobile {          
+           transform: scale(.30);
+           margin-left: -145px;          
+           padding-top: 120px;
+           margin-right: 0px;
+           
+        }
         .left {
             margin-right: 30px;
 
@@ -53,16 +161,74 @@
 
 
 
+
 .page {
     background: url('./../../assets/images/background/bg-about.jpg');
 }
 
 .about .section-about {
-    padding: 168px 0;
+    margin-top: 130px;
+    padding: 0px 0;      
+    margin-bottom: 0px;   
+}
+.group-image {
+    display: flex;
+    margin-top: -40px;
+      
+    .cel-animation {
+    width: 300px;
+    height: 625px;
+    margin-left: 100px;
+    transform: rotate(deg) skew(0deg);
+    img {
+        width: 280px;
+        margin-top: -50px;
+        position: absolute;  
+        transition: 1.5s;  
+    }
+    &:hover img:nth-child(4){
+        transform: translate(180px, -120px);
+        opacity: 1;
+        border: solid 2px white;
+        border-radius: 22px;
+      
+    }
+    &:hover img:nth-child(3){
+        transform: translate(130px, -90px);
+        opacity: 0.8;
+        border: solid 2px white;
+        border-radius: 22px;
+    }
+    &:hover img:nth-child(2){
+        transform: translate(80px, -60px);
+        opacity: 0.6;
+        border: solid 2px white;
+        border-radius: 22px;
+    }
+    &:hover img:nth-child(1){
+        transform: translate(30px, -30px);
+        opacity: 0.4;
+      
+    }   
+    }
+    .capture {           
+        opacity: 0;
+    }
+}
+.service-subtitle {   
+    margin-top: 40px; 
+    .sub-title{
+        margin-bottom: -20px;
+        &::after {
+            bottom: 40px
+        }
+    }
+    .group-image {
+            margin-left: 1009px;
+        }   
 }
 
-
-.home-3 .section-about {
+.home-3 .section-responsive {
     padding: 145px 0 0;
 
     .group-image {
@@ -72,17 +238,7 @@
         .left {
             margin-right: 23px;
         }
-        .item.bg-3 {
-            position: absolute;
-            bottom: -70px;
-            right: 60px;
-
-            @include mobile {
-                position: relative;
-                right: auto;
-                bottom: 0;
-            }
-        }
+               
     }
     @include tablet {
         padding: 40px 0 120px;
@@ -112,6 +268,9 @@
 
 .montono {
     padding: 0 6px;
+    @include tablet {
+        margin-bottom: -300px;
+    }
 }
 
 .road-map {
@@ -119,6 +278,9 @@
 
     @include tablet {
         padding: 100px 0;
+    }
+    @include mobile {
+        margin-top: 400px;
     }
 }
 
@@ -170,11 +332,16 @@
     padding: 162px 0 99px;
 }
 
-.clients {
+.clients {  
     padding: 139px 0 128px;
-
+    margin-top: 0px;
     @include tablet {
         padding: 100px 0;
+        margin-top: 0px;
+    }
+    @include mobile {
+        margin-top: -80px;
+
     }
 }
 .home-2 .clients {
@@ -205,10 +372,20 @@
 
 .action {
     padding: 149px 0 122px;
+    @include mobile {
+        margin-top: 100px;
+        margin-bottom: 00px;
+      }
     .action__body {
-        background: $bg-item-3;
+        background: transparent;
+        border: 2px solid $principal-dark;
         border-radius: 20px;
         padding: 61px 72px;
+        box-shadow: 0 0 5px rgb(0, 0, 0),
+                    0 0 10px rgb(35, 0, 39),
+                    0 0 20px rgba(15, 1, 15, 0),
+                    0 0 30px rgb(104, 1, 117);
+
         @include flex(center,space-between);
 
         @include tablet {
@@ -281,14 +458,18 @@
 }
 
 .visions {
+    margin-top: 100px;
     padding: 169px 0 167px;
-
     @include tablet {
         padding: 100px 0;
     }
-
+    @include mobile {
+        margin-top: 0;
+    }
     .group-image {
-        margin-left: -130px;
+        transform: scale(.8);
+        margin-left: -100px;
+        margin-top: -70px;
 
         @include tablet {
             margin-left: 0;
@@ -298,23 +479,218 @@
             }
         }
     }
+        .block-text {
+        margin-left: 0;
+        padding-left: 0;
+        .sub-title {
+            &::after {
+                @include mobile {
+                    left: 47%;
+                }
+            }
+        }
+        p{
+            margin-left: 20px;
+            text-align: left;
+            span {
+                &::after {
+                    content:'';
+                    left: -18px;
+                    top: 8px;
+                    width: 6px;
+                    height: 6px;
+                    background-color: $principal-dark;
+                    position: absolute;
+                    color: $principal;
+            }
+        }
+        
+    }}
 }
 
-.services {
+.services {   
+    @include mobile {      
+        margin-left: 0;
+        margin-right: 0;
+    }
     .block-text {
         padding-top: 21px;
+        @include mobile{
+            ul {
+                margin-left: 0;     
+                padding-left: 20px;
+                padding-right: 20px;           
+                li {
+                    text-align: left;
+                    margin-left: 0px;
+                }
+              
+            }
+        }
     }
     .group-image {
-        margin-left: 109px;
+        margin-top: 40px;
+        position: absolute;
+        display: flex;
+        transition: all .6s ease-in-out;
+        @include mobile {
+            margin-top: 140px;
+            width: 330px;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &:hover {
+            .btn-world {
+                padding: 11px 45px;
+                margin-left: 165px;      
+                background-color: #000000;
+                @include mobile {
+                    padding: 11px 18px;
+                    margin-left: 30px;
+                    margin-top: 30px;
+                    font-size: 15px;
+                }
+          
+            }            
+            
+            .image1 img {
+                width: 250px;
+                height: 250px;
+                margin-left: -10px;
+                margin-top: 50px;
+                @include mobile {
+                    margin-top: -30px;
+                    width: 150px;
+                    height: 150px;
+                    margin-left: auto;
+                    margin-right: auto;
 
+                }
+              
+            }
+            .image2 {
+                opacity: 1;
+                transform: scale(1);
+                @include mobile {
+                    margin-top: 220px;
+                }
+            }
+        }
+        .image1 {
+            margin-top: 140px;
+            position: absolute;
+            margin-left: 150px;
+            @include mobile {
+                margin-left: 30px;
+                margin-right: 0;
+                margin-top: 230px;
+            }
+           
+            img {
+                width: 300px;
+                height: 300px;
+                margin-top: 20px;
+                margin-left: -30px;
+                transition: all 0.6s ease-in-out;
+                @include mobile {
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 200px;
+                    height: 200px;
+                    margin-top: -60px;
+                    
+                }  
+            }
+        }
+        .image2 {
+            transform: scale(.1);
+            margin-top: 70px;
+            position: absolute;
+            margin-left: 15px;
+            transition: all 0.6s ease-in-out;                 
+            animation: giro 10s infinite linear;
+            opacity: 0;
+            @include mobile {
+                margin-top: 210px;
+                margin-left: 25px;
+            }
+            }
+        @keyframes giro {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }            
+        }
+        .btn-world {
+            margin-top: 290px;
+            margin-left: 180px;
+            z-index: 1000;   
+            padding: 9px 35px;
+            border: 2px solid $principal;
+            color: $white;
+            background-color: #000000;
+            border-radius: 27px;
+            transition: color 0.4s linear;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            font-family: $font-main;
+            transition: all 0.6s ease-in-out;
+            box-shadow: 0 0 5px rgb(190, 18, 190),
+                        0 0 10px rgb(104, 1, 117); 
+            @include mobile {
+                padding: 9px 20px;
+                margin-left: 25px;
+                margin-top: 0px;
+                top: 90px;
+
+            }               
+
+            &:hover {
+                background-color: #000000;
+
+                box-shadow: 0 0 5px rgb(0, 0, 0),
+                0 0 10px rgb(35, 0, 39),
+                0 0 20px rgba(15, 1, 15, 0),
+                0 0 30px rgb(104, 1, 117);
+                color: $principal;
+              
+            }
+        
+            &::before,
+            &::after {
+                position: absolute;
+                z-index: -1;
+                top: 50%;
+                content: "";
+                width: 20px;
+                height: 20px;
+                background-color: $main-color;
+                border-radius: 50%;
+             
+            }
+            &::before {
+                left: -20px;
+                transform: translate(-50%, -50%);       
+            }
+            &::after {
+                right: -20px;
+                transform: translate(50%, -50%);       
+            }               
+        }
         @include tablet {
             margin-left: 0;
             margin-top: 60px;
             img {
                 width: 100%;
             }
-        }
+        }        
     }
+
 }
 
 .collection {
@@ -347,6 +723,7 @@
 }
 
 .contact {
+    margin-bottom: -120px;
     padding: 144px 0 168px; 
 }
 

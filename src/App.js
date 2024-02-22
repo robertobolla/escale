@@ -7,10 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import AOS from 'aos';
-
-
 import { Route , Routes } from 'react-router-dom';
-
 import routes from './pages/index'
 
 

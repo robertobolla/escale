@@ -6,7 +6,7 @@ import './button.scss';
 
 const ButtonOne = () => {
   return (
-        <Link to='./escalE.pdf' className="btn-action" target="_blank" rel="noopener noreferrer" download="Resumen.pdf">        
+        <Link to='./escale.pdf' className="btn-action" target="_blank" rel="noopener noreferrer" download="Resumen.pdf">        
             Resumen     
         </Link>
   );

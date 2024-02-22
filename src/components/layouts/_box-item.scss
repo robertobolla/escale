@@ -157,12 +157,22 @@
 
 
 .image-box {
+    width: 90%;
     position: relative;
     border-radius: 20px;
-    overflow: hidden;
-    cursor: pointer;
+    overflow: hidden;    
     margin-bottom: 30px;
-
+    background-color: transparent;
+    margin-top: 20px;    
+    box-shadow: 0 0 5px rgb(214, 4, 214),
+                0 0 10px rgb(162, 11, 179),
+                0 0 20px rgb(151, 9, 167);  
+    @include tablet {
+        margin-top: 50px;
+    }
+    @include mobile {
+        margin-top: 35px;       
+    }
     img {
         transition: all .3s ease-in-out;
         transform: translate3d(0, 0, 0) scale(1, 1);
@@ -171,56 +181,121 @@
         width: 100%;
         max-width: 100%;
     }
-
-    &:hover {
-        img {
-            
-            transform: translate3d(0, 0, 0) scale(1.1, 1.1);
-            -webkit-transform: translate3d(0, 0, 0) scale(1.1, 1.1)
-        }
-        .image-box__title {
+    &:hover {     
+        transform: translateY(-40px)!important; 
+        transition: all .3s ease-in-out;                        
+        box-shadow: 0 0 25px rgb(190, 18, 190),
+                    0 0 40px rgb(104, 1, 117),
+                    0 0 50px rgb(52, 1, 58);         
+        .image-box__button {
             bottom: 40px;
             opacity: 1;
-            visibility: visible;
-        }
+            visibility: visible;    
+            color: white;                
+        }        
     }
-
-    .image-box__title {
+    .image-box__button {
         position: absolute;
         bottom: 0;
-        left: 69px;
-        right: 66px;
-        padding: 20px 48px;
-        background: $bg-item-1;
+        left: 0px;
+        right: 0px;      
+        background: transparent;
         border-radius: 33px;
         text-align: center;
         opacity: 0;
         visibility: hidden;
-        transition: all .3s ease-in-out;
+        transition: all .5s ease-in-out;
+        border: solid 2px $principal;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;     
+        box-shadow: 0 0 5px rgb(190, 18, 190),
+                    0 0 10px rgb(104, 1, 117);                
+        background-color: rgb(81, 5, 79,0.3); 
+        @include mobile {
+            padding-top: 0px;
+            opacity: 1;
+            visibility: visible; }
+        &:hover {
+            background-color: transparent;
+            color: $principal-dark;
+            box-shadow: 0 0 5px rgb(190, 18, 190),
+                        0 0 10px rgb(104, 1, 117),
+                        0 0 20px rgb(190, 18, 190),
+                        0 0 30px rgb(104, 1, 117);                 
+        }               
+    }  
+    @include mobile {
+        margin-left: 18px;         
+    }  
+}
 
-        h6 {
-            margin-bottom: 0;
+.home-3 .image-box .image-box__button {  
+    
+    border: solid 2px $principal;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    @include mobile {
+        margin-bottom: 15px;
+        bottom: 20px;
+        
+ 
+    }  
+  }
+  
+
+.card {
+    width: 100%;
+    height: 58vh;
+    background-color: transparent;
+    align-items: center;       
+    @include mobile {
+        height: 100%;       
+    }
+      .card-title{
+        font-size: 25px;
+        padding-top: 25px;   
+        padding-bottom: 10px;  
+        color: $principal;        
+    }
+    .card-caracteristica {
+        text-align: center;
+        line-height: 1.1;    
+        padding-left: 40px;
+        padding-right: 40px; 
+        padding-top: 20px;         
+        font-size: 15px;    
+        @include mobile {
+            padding-top: 10px;
+            padding-bottom: 100px;
+        }        
         }
-    }
-
-    
+   
 }
 
-.home-3 .image-box .image-box__title {
-    background-image: -webkit-linear-gradient(290deg, #2a2a2a, #383838);
-    background-image: -o-linear-gradient(290deg, #2a2a2a, #383838);
-    background-image: linear-gradient(160deg, #6a1554, #3900b5);
-    
-    a:hover {
-        color: $white;
-    }
+.separador {
+    content: "";
+    margin-top: 14px;
+    margin-bottom: 14px;
+    width: 100%;
+    height: 2px;      
+    background-color: $principal-dark;
 }
-
 .road-map__content {
     @include flex(flex-start,space-between);
     flex-wrap: wrap;
     position: relative;
     margin-top: 52px;
+    .left {
+        @include mobile {
+            margin-left: 0;
+            left: 0;
+            
+        }
+    }
 
 
     &.style-2 {
@@ -349,7 +424,7 @@
         margin-left: 0;
         width: 4px;
         height: 100%;
-        background: $white;
+        background: $principal;
         border-radius: 2px;
         margin-top: 84px;
 
@@ -358,9 +433,32 @@
     .box-time {
         border-radius: 20px;
         padding: 67px 60px 40px;
-        background: $bg-item-2;
+        background: transparent;
         max-width: 469px;
         position: relative;
+        border: solid 2px $principal;        
+        &:hover{
+            box-shadow:
+            0 0 5px rgb(190, 18, 190),
+            0 0 10px rgb(104, 1, 117),
+            0 0 20px rgb(104, 1, 117); 
+            span {
+                box-shadow:
+            0 0 5px rgb(190, 18, 190),
+            0 0 10px rgb(104, 1, 117),
+            0 0 20px rgb(104, 1, 117); 
+            }
+            i {
+                color: $white;
+                opacity: 1;             
+            }          
+            &::before {    
+                box-shadow:
+                    0 0 5px rgb(190, 18, 190),
+                    0 0 10px rgb(104, 1, 117),
+                    0 0 20px rgb(104, 1, 117); 
+                   }
+        }
 
         &::before {
             content: '';
@@ -368,8 +466,8 @@
             top: 50%;
             width: 116px;
             height: 4px;
-            background: $white;
-
+            background: $principal;
+           
             @include mobile {
                 display: none;
             }
@@ -396,7 +494,7 @@
             
             span {
                 left: -133px;
-            }
+            }           
         }
 
         span {
@@ -404,16 +502,22 @@
             height: 34px;
             min-height: 34px;
             border-radius: 50%;
-            background: $white;
+            background: black;  
+            border: solid 2px $principal;
             @include flex(center,center);
-
-            position: absolute;
-            
+            position: absolute;            
             top: 44%;
+            &:hover {
+                i {
+                color: white;
+                }
+            }
 
             i {
                 font-size: 16px;
-                color: $main-color;
+                color: $principal;    
+                opacity: 0;
+           
             }
         }
     }
@@ -425,7 +529,7 @@
                 left: 8%;
             }
             .box-time {
-                margin-top: 0 !important;
+                margin-top: 0;
                 margin-bottom: 100px;
 
                 &:nth-last-child(1) {
@@ -435,13 +539,13 @@
                 }
                 
                 &::before {
-                    left: -100% !important;
+                    left: -100%;
                     right: auto;
                     width: 100%;
                 }
                 span {
-                    right: auto !important;
-                    left: -59% !important;
+                    right: auto ;
+                    left: -59% ;
                 }
             }
         }
@@ -451,7 +555,7 @@
 
 
 .clients-box {
-    background: $bg-item-2;
+    background-color: $principal-dark;
     border-radius: 10px;
     padding: 20px 25px;
     text-align: center;
@@ -638,16 +742,34 @@
             li {
                 @include flex(center,flex-start);
                 margin-bottom: 30px;
+                &:hover {
+                    .icon {  box-shadow: 0 0 10px rgb(5, 0, 5),
+                                         0 0 15px hwb(294 7% 64% / 0.355),
+                                         0 0 20px rgb(194, 40, 211),  
+                                         0 0 30px rgb(145, 12, 159);
+                             transition: 1s;
+                             text-shadow:0 0 5px rgb(5, 0, 5),
+                                         0 0 10px hwb(294 7% 64% / 0.355),
+                                         0 0 0px rgb(194, 40, 211),  
+                                         0 0 20px rgb(145, 12, 159);
+                             transition: 0.6s;
+                    } 
+                }
                 .icon {
-                    width: 90px;
-                    height: 90px;
-                    min-width: 90px;
+                    width: 80px;
+                    height: 80px;
+                    min-width: 80px;
                     border-radius: 50%;
-                    background: $bg-item-1;
+                    background: transparents;
                     margin-right: 26px;
+                    color: $principal;
                     @include flex(center,center);
                     font-size: 30px;
-                }
+                    text-shadow: 0 0 10px rgb(5, 0, 5),
+                                 0 0 15px hwb(294 7% 64% / 0.355),
+                                 0 0 20px rgb(194, 40, 211),  
+                                 0 0 30px rgb(145, 12, 159);                    
+                    }
                 .info {
                     p {
                         margin-bottom: 0;

@@ -6,7 +6,10 @@ import wsp from '../../assets/images/whatsapp/wsp.png'
 const ButtonWhatsapp = () => {
     return (
           <a href="https://wa.link/r60yqc"  target="_blank" rel="noopener noreferrer" >        
-             <img className="button-whatsapp" src={wsp} alt="iconoWhatsapp" />
+             <div className="button-whatsapp" src={wsp} alt="iconoWhatsapp" >
+                  <p className="chateame">Chateanos</p>
+             </div>
+             
           </a>
     );
   }

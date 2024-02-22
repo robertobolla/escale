@@ -5,7 +5,6 @@ import menus from "../../pages/menu";
 import './header.scss';
 
 import logo from '../../assets/fake-data/logo';
-import ButtonOne from '../button/ButtonOne';
 
 const Header = () => {
 
@@ -42,8 +41,7 @@ const Header = () => {
                         <div className="header__body d-flex justify-content-between">
                             <div className="header__logo">
                                 <Link to="/">
-                                    <img id="site-logo" src={logo}
-                                    alt="escale"  />
+                                    <img id="site-logo" src={logo} alt="logo"  />
                                 </Link>
                             </div>
 
@@ -74,11 +72,7 @@ const Header = () => {
                                             ))
                                         }
                                     </ul>
-                                </nav>
-                                <div className="button">
-                                    <ButtonOne />
-                                </div>
-                                
+                                </nav>                            
                                 <ul className="social">
                                     <li><Link to="#"><i className="fab fa-facebook-f"></i></Link></li>
                                     <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>

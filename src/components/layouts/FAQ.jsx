@@ -10,9 +10,8 @@ const FAQ = (props) => {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <div className="block-text center">
-                            <h1 className="heading-bg" data-aos="fade-in" data-aos-duration="1000"><span>PF</span></h1>
-                            <h5 className="sub-title mb-10" data-aos="fade-up" data-aos-duration="1000">PF</h5>
+                        <div className="block-text up center">                         
+                            <h5 className="sub-title no-mobile mb-10" data-aos="fade-up" data-aos-duration="1000">FAQ</h5>
                             <h3 className="title mb-28" data-aos="fade-up" data-aos-duration="1000">Preguntas Frecuentes</h3>
                         </div>
                     </div>

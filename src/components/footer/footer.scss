@@ -19,13 +19,13 @@
 
         .social {
             @include flex(center,center);
-            padding-left: 0;
+            padding-left: 500;
 
             li {
                 width: 60px;
                 height: 60px;
                 border-radius: 50%;
-                background: $bg-item-1;
+                background: $principal-dark;
                 margin: 0 12px;
                 @include flex(center,center);
 
@@ -47,7 +47,7 @@
                         top: 0;
                     }
                     &:nth-child(1):before {
-                        background: #2374e1;
+                        background: #0ca01d;
                     }
                     &:nth-child(2):before {
                         background: #b72294;
@@ -221,7 +221,7 @@
     -ms-border-radius    : 50%;
     -o-border-radius     : 50%;
     cursor               : pointer;
-    background-color: $bg-item-1;
+    background-color: $principal-dark;
 }
 .is_dark #scroll-top {
     background: #fff;

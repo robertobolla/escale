@@ -2,6 +2,63 @@
 
 .block-text {
     position: relative;
+    @include tablet {
+        text-align: center;
+    }     
+    .title {
+        font-size: 50px;
+        span {
+            position: relative;
+        }
+        @include mobile {
+            font-size: 29px;
+        }
+    }
+    .title span::before {
+        content: "CONECTADO";
+        color: $principal;
+        animation: words 24s infinite;
+    }
+    .title span::after {
+        content: "";
+        position: absolute;
+        width: calc(100% + 8px);
+        height:100%;
+        color: $principal;
+        background-color: black;
+        border-left: solid 2px $principal-dark;
+        right: -5px;
+        animation: cursor .8s infinite, typing 30s steps(20) infinite;
+    }
+    @keyframes cursor {
+        to {
+            border-left: 2px solid black;
+        }
+    }
+    @keyframes words {
+        0%,25% {
+            content: "CONECTADO";
+        }
+        26%,50% {
+            content: "VENDIENDO";
+        }
+        51%,75% {
+            content: "ABIERTO";
+        }
+        76%,100% {
+            content: "CRECIENDO";
+        }
+        
+    }
+    @keyframes typing {
+        10%,15%,30%,35%,50%,55%,70%,90%,95% {
+            width: 0;
+        }       
+        5%,20%,25%,40%,45%,60%,65%,80%,85%{
+            width: calc(100% + 8px);
+        } 
+    }
+
     .sub-title {
         position: relative;
         line-height: 3.2;
@@ -13,18 +70,31 @@
             left: 0;
             width: 36px;
             height: 5px;
-            background: $main-color;
+            background: $principal-dark;
+            @include tablet {
+                left: 48%;
+            }
+        }
+       
+        @include mobile{
+            font-size: 25px;
         }
     }
-
     .desc {
-        font-size: 24px;
+        font-size: 24px;     
     }
+    .desc1 {
+        font-size: 24px;   
+        @include mobile {
+            font-size: 16px;
+        }   
+    }
+    
+    
     &.center {
         .sub-title::after {
             left: 0;
-            right: 0;
-            
+            right: 0;            
             margin-left: auto;
             margin-right: auto;
             text-align: center;
@@ -37,18 +107,41 @@
         text-transform: uppercase;
         position: absolute;
         z-index: -1;
-        left: 27px;
+        left: 0px;
         right: 0;
         top: -40px;
-
         margin-left: auto;
         margin-right: auto;
         text-align: center;
-
         @include mobile {
-            font-size: 20px;
+            font-size: 30px;
             top: 50px;
+            left: 27px;
+        }       
+
+        span {
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: #4425ad;
+            -webkit-text-fill-color: rgb(0 0 0/0%);
         }
+    } 
+
+    h1.heading-bg2 {
+        font-size: 240px;
+        letter-spacing: 24px;
+        text-transform: uppercase;
+        position: absolute;
+        z-index: -1;
+        left: 0px;
+        right: 0;
+        top: -40px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        @include mobile {
+            font-size: 30px;
+            top: 50px;           
+        }       
 
         span {
             -webkit-text-stroke-width: 1px;
@@ -59,7 +152,16 @@
 
     ul {
         padding-left: 3px;
+        @include tablet{
+            margin-top: 0px;
+            margin-left: 70px;
+        }
+        @include mobile {
+            margin-top: 0px;
+            margin-left: 30px;
 
+          
+        }
         li {
             @include flex(flex-start, flex-start);
 
@@ -69,6 +171,20 @@
                 color: $main-color;
                 margin-top: 4px;
                 font-size: 22px;
+            }
+            p {
+                @include mobile {
+                    font-size: 15px;
+                }
+            }
+            @include tablet{
+                margin-left: 35%;
+            }
+            @include mobile{
+                
+                text-align: center;
+                margin-left: 18%;
+                margin-right: auto;
             }
         }
 
@@ -101,4 +217,33 @@
         }
     }
 
+}
+.left {
+    @include mobile{
+    left: 600px;}
+}
+
+.up {
+    @include mobile {
+        margin-top: -120px;
+        .sub-title{
+            line-height: 70px;
+            margin-bottom: 40px;
+        }
+        .heading-bg{
+            margin-top: -85px;            
+        }
+
+    }
+}
+
+.heading-service{
+    @include mobile {       
+        margin-top: -50px;
+    }
+}
+
+.no-mobile {
+    @include mobile{
+    font-size: 0;}
 }

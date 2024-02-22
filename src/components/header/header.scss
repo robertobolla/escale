@@ -14,7 +14,7 @@
         position: fixed;
         top: 0;
         box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 30%);
-        background: #200b6a;
+        background: black;
         height: $header-shrink-height;
     }
 
@@ -96,25 +96,41 @@
         .main-nav  {
            
             .menu {
+                
                 @include flex(center, flex-start);
                 li {
                     position: relative;
                     width: 100%;
                     a {
                         position: relative;
-                        display: block;
-
-    
+                        display: block;  
+                        color: white;  
                     }
-                    
+                    a::after{
+                        content: "";
+                        position: absolute;
+                        background-color: $principal-dark;
+                        height: 3px;
+                        width: 0;
+                        left: 0;
+                        bottom: -10px;
+                        transition: 0.5s;
+                    }
+                    a:hover:after{
+                        width: 100%;
+                        @include mobile {
+                            width: 0;
+                        }
+                    }
                     .sub-menu {
                         position: absolute;
                         top: 100%;
                         left: 0;
-                        width: 200px;
-                        background-color: $bg-item-2;
+                        width: 120px;
+                        background-color: black;
                         z-index: 9999;
                         opacity: 0;
+                        margin-top: -10px;
                         visibility: hidden;
                         -webkit-transition: all 0.3s ease;
                         -moz-transition: all 0.3s ease;
@@ -126,21 +142,21 @@
                         -ms-transform: translateY(35px);
                         -o-transform: translateY(35px);
                         transform: translateY(35px);
-                        padding: 10px 0;
+                        padding: 10px 10px 4px 10px;
                         li {
-                            padding: 5px 20px;
+                            padding: 5px 0px;
                             position: relative;
     
                             &::before {
                                 content: '';
-                                position: absolute;
-                                top: 0;
+                                position: absolute;                                
                                 left: 0;
                                 width: 0;
-                                height: 100%;
-                                background: rgba(69,38,177,0.2);
-                            }
-    
+                                height: 3px;
+                                background: $principal-dark;
+                                bottom: 0px;                              
+
+                            }    
                             &:hover::before  {
                                 width: 100%;
                                 transition: width .3s ease;
@@ -151,22 +167,14 @@
                                 &::after {
                                     display: none;
                                 }
-                            }
+                            }                          
                         }
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 2px;
-                            background: $main-color;
-                        }
+                       
                     }
                     &:hover .sub-menu{
                         opacity: 1;
                         visibility: visible;
-                        transform: translateY(26px);
+                        transform: translateY(26px);                       
                     }
                 }
     
@@ -190,7 +198,7 @@
                 top: 0;
                 left: 0;
                 z-index: 999999;
-                background-color: $bg-item-2;
+                background-color: black;
                 box-shadow: 0px 3px 16px rgb(47 83 109 / 12%);
                 transform: translateX(-100%);
                 transition: transform 0.5s ease;
@@ -225,7 +233,7 @@
                     padding-left: 0;
                     li{
                         padding: 15px 0;
-                        border-bottom: 1px solid rgb(255 255 255 / 10%);
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
                         a {
                             padding: 0 15px;

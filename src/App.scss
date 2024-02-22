@@ -1,9 +1,4 @@
-/**
-  * Name: Monteno | NFT Marketplace ReactJS Template
-  * Version: 1.0.1
-  * Author: Themesflat
-  * Author URI: http://www.themesflat.com
-*/
+
 
 @use './scss/' as *;
 @use './components/layouts/' as *;
@@ -15,6 +10,10 @@
 @font-face {
   font-family:"Roboto";
   src: url("assets/font/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family:"Neurock";
+  src: url("assets/font/Neurock.ttf") format("truetype");
 }
 * {
   margin: 0;
@@ -28,14 +27,9 @@ body {
   font-weight: 400;
   color: $white;
   padding-top: $header-height;
-  background-color: #00025d;
+  background-color: #000;
 
-  &.home-1 {
-      background-image: url('../src/assets/images/background/bg-element.jpg');
-  }
-  &.home-2 {
-      background-image: url('../src/assets/images/background/bg-element-2.jpg');
-  }
+
 }
 
 .row>* {
