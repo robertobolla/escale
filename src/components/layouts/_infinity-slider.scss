@@ -10,12 +10,15 @@
 }
 
 .slider-infinity {
+    padding-top: 100px;
     width: 75vw;
     height: auto;
     margin: auto;
     overflow: hidden;
     @include mobile {
         width: 90vw;
+        margin-top: 300px;
+        margin-bottom: 0;
     }
     
 }

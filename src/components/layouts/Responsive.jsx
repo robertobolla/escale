@@ -13,9 +13,9 @@ const Responsive = () => {
     <section className="tf-section section-responsive" id="responsive">
       <div className="container">
         <div className="row reverse">
-          <div className="col-xl-7 col-md- column-up">
-            <div className="group-image ">
-              <div className="left group-left">
+          <div className="col-xl-7 col-md-12">
+            <div className="group-image">
+              <div className="group-left">
                 <div className="item-image item-logo">
                   <img src={item.itemLogo} alt="Monteno" />
                 </div>
@@ -28,8 +28,6 @@ const Responsive = () => {
                 <div className="item-image item-cel small">
                   <img src={item.itemCel1} alt="Monteno" />
                 </div>
-              </div>
-              <div className="right group-right">
                 <div className="item-image item-tablet">
                   <img src={item.itemTablet1} alt="Monteno" />
                 </div>

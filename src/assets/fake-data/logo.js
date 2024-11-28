@@ -1,3 +1,3 @@
-const logo = require('../images/logo.png')
+const logo = require("../images/logo.gif");
 
 export default logo;

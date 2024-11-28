@@ -76,7 +76,7 @@ const Contact = () => {
                     </div>
                     <div className="info">
                       <h5>Email</h5>
-                      <p className="fs-18">info@escalewebs.online</p>
+                      <p className="fs-18">info@escalewebs.com</p>
                     </div>
                   </li>
                 </ul>
@@ -85,7 +85,7 @@ const Contact = () => {
             <div className="col-md-6">
               <form
                 className="contact__form"
-                action="https://formsubmit.co/robertobolla9@gmail.com"
+                action="https://formsubmit.co/info@escalewebs.com"
                 method="POST"
               >
                 <div className="form-group">

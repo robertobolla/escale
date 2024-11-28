@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Slider = () => {
-  const [datatext] = useState({
-    subtitle: "Soluciones Digitales",
-    title: "TU NEGOCIO SIEMPRE",
-    desc: "Nunca fue tan fácil tener una tienda virtual",
-  });
+  const { t } = useTranslation();
 
   return (
     <section className="tf-section hero-slider">
@@ -15,24 +12,26 @@ const Slider = () => {
           <div className="col-xl-5 col-md-12 col-12">
             <div className="block-text up pt-24">
               <h6 className="sub-title mb-6" data-aos="fade-up">
-                {datatext.subtitle}
+                {t("sliderSubTitle")}
               </h6>
               <h2 className="title mb-26" data-aos="fade-up">
-                {datatext.title}
+                {t("sliderTitle")}
                 <br></br>
                 <span></span>
               </h2>
               <p className="desc mb-43" data-aos="fade-up">
-                {datatext.desc}
+                {t("sliderDesc")}
               </p>
-              <Link
-                to="/contact"
+              <a
+                href="https://calendly.com/escalewebs/consultoria-servicios-webs"
                 className="btn-action style-2"
                 data-aos="fade-up"
                 data-aos-duration="1200"
+                target="_blank"
+                rel="noreferrer"
               >
-                Contactanos
-              </Link>
+                Reserva una reunión
+              </a>
             </div>
           </div>
           <div className="col-xl-7 col-md-12 col-12">

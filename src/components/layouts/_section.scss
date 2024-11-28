@@ -27,12 +27,6 @@
         margin-top: 100px;
     }
 }
-.column-up {
-    @include mobile {
-    margin-top: -330px;
-    margin-left: 30px;
-    }
-}
 
 .section-about {
     margin-top: 0px;
@@ -96,12 +90,70 @@
     }
 }
 
-.section-responsive {
-    margin-top: 0px;
-    padding: 170px 0;
+.section-ticket {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 200px;   
+    .new-title {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 60px;
+    }
+    .ticket-contenedor{      
+      
+        .ticket-img {
+          width: 550px;
+          margin-left: 50px;
+          margin-top: 30px;
+          @include tablet {
+            margin-left: auto;
+            margin-right: auto;
+          }
+          @include mobile {
+            width: 350px;
+            padding-top: 50px;
+            margin-left: -10px;
+            margin-right: auto;
+            align-items: center;
+          }
+    }
+    }
+    .btn-ticket {
+        margin-top: 0px;
+    }
     @include tablet {
         margin-top: 400px;
-        padding: 100px 0;    
+        .block-text {
+            .sub-title {
+                &::after {
+                    left: 0;}
+            }
+        }   
+       
+    }
+    @include mobile {
+        margin-top: 150px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        .new-title {
+            font-size: 50px;
+        }
+        .block-text {
+            margin-top: 50px;                        
+          
+        }       
+    }
+}
+
+
+.section-responsive {
+    margin-top: 0px;
+    padding: 0px 0;
+    display: flex;
+    @include tablet {
+        align-items: center;
+        margin-top: 100px;
+        padding: 0px 0;    
         margin-left: auto;
         margin-right: auto;   
         margin-bottom: -100px;
@@ -111,7 +163,7 @@
         margin-left: 0px;
         margin-right: 0;
         padding-bottom: 0;
-        margin-top: 270px;
+        margin-top: 0px;
         width: 92vw;
     }
     .block-text{
@@ -122,28 +174,45 @@
         .sub-title {
             &::after {
                 left: 0%;
+                @include tablet {
+                    left: 48%;
+                }
                 @include mobile {
                     left: 46%;
                 }
     }}}
-    .group-image {    
-        padding-top: 100px;          
+    .group-image {  
+        padding-left: 140px;
+        padding-top: 0px;          
         margin-left: auto;
-        display: flex;
+        margin-right: auto;
         align-items: center;
         transform: scale(0.7);
-        @include tablet { 
+        @include tablet {    
+            padding-left: 0;         
             padding-top: 0;         
             transform: scale(0.8);
             margin-left: auto;
             margin-right: auto;
+            align-items: center;
         }
         @include mobile {          
-           transform: scale(.30);
-           margin-left: -145px;          
-           padding-top: 120px;
+           transform: scale(.38);
+           margin-left: 0px;          
+           padding-top: 0px;
            margin-right: 0px;
-           
+           padding-left: 0px;           
+        }
+        .group-left{
+            margin-top: -280px; 
+            @include tablet {
+                margin-left: 50px;       
+            }
+            @include mobile {
+                margin-top: -550px;
+                margin-left: 0px;
+                margin-bottom: 0;
+            }
         }
         .left {
             margin-right: 30px;
@@ -285,7 +354,7 @@
 }
 
 .home-3 .montono {
-    padding: 140px 0 0;
+    padding: 40px 0 0;
 }
 .home-3 .road-map {
     padding: 138px 0px 0;

@@ -18,6 +18,15 @@
         height: $header-shrink-height;
     }
 
+    .header__logo {
+       img {
+            width: 230px;
+            @include mobile {
+                width: 180px
+            }
+       }
+    }
+
     .header__right {
         @include flex(center,flex-end);
 
@@ -125,7 +134,7 @@
                     .sub-menu {
                         position: absolute;
                         top: 100%;
-                        left: 0;
+                        left: -5px;
                         width: 120px;
                         background-color: black;
                         z-index: 9999;

@@ -7,7 +7,7 @@
     @include mobile {
         margin-top: -80px;
         margin-bottom: -50px;
-        padding: 0 15px;
+        padding: 0 0px;
         text-align: center;
     }   
     .block-text {
@@ -58,7 +58,6 @@
         border-radius: 20px;
         @include tablet {
             position: relative;
-            right: auto !important;
             width: 100%;
         }
 

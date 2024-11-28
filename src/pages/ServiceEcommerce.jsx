@@ -29,8 +29,8 @@ const Ecommerce = () => {
                   <h2 className="sub-title mb-20">E-commerce</h2>
                   <p className="fs-24 mb-33">
                     Una tienda virtual completa para vender 24/7, con pasarela
-                    de pagos, muy fácil de gestionar. Ideal para negocios que
-                    tienen un negocios fisico o venden por redes sociales y
+                    de pagos, muy fácil de gestionar. Ideal para personas que
+                    tienen un negocio fisico o venden por redes sociales y
                     quieren llevar su negocio al siguiente nivel.
                   </p>
                 </div>

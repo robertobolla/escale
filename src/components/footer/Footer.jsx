@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./footer.scss";
-
 import logo from "../../assets/fake-data/logo";
 
 const Footer = () => {
@@ -35,17 +34,23 @@ const Footer = () => {
           <div className="row">
             <div className="footer__body">
               <Link to="/">
-                <img src={logo} alt="ESCALE" data-aos="fade-down" />
+                <img
+                  className="logoEscale"
+                  src={logo}
+                  alt="ESCALE"
+                  data-aos="slide-right"
+                  data-aos-duration="3200"
+                />
               </Link>
 
-              <p className="desc fs-18" data-aos="fade-up">
+              <p className="desc fs-18" data-aos="fade-in">
                 Porque sabemos que tener presencia en internet no solo es
                 importante, es necesario. Te ayudamos a posicionarte de manera
                 profesional para que puedas escalar tu negocio y llevarlo al
                 siguiente nivel. Queremos ser parte de tu crecimiento.
               </p>
               <ul className="social">
-                <li data-aos="fade-up" data-aos-duration="1200">
+                <li data-aos="slide-right" data-aos-duration="1200">
                   <a
                     href="https://wa.link/r60yqc"
                     target="_blank"
@@ -54,7 +59,7 @@ const Footer = () => {
                     <i className="fab fa-whatsapp"></i>
                   </a>
                 </li>
-                <li data-aos="fade-up" data-aos-duration="1200">
+                <li data-aos="slide-right" data-aos-duration="1200">
                   <a
                     href="https://www.instagram.com/escalewebs/"
                     target="_blank"

@@ -17,7 +17,7 @@
     .title span::before {
         content: "CONECTADO";
         color: $principal;
-        animation: words 24s infinite;
+        animation: words-es 24s infinite;
     }
     .title span::after {
         content: "";
@@ -58,6 +58,7 @@
             width: calc(100% + 8px);
         } 
     }
+   
 
     .sub-title {
         position: relative;

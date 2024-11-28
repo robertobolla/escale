@@ -11,19 +11,30 @@ import Clients from "../components/layouts/Clients";
 import Slider from "../components/slider/Slider";
 import ButtonWhatsapp from "../components/button/ButtonWhatsapp";
 import InfinitySlider from "../components/layouts/InfinitySlider";
+import { LanguageProvider } from "../context/languageContext";
+import TicketHome from "../components/layouts/TicketHome";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
     <div className="home-3">
-      <Header />
-      <Slider />
-      <InfinitySlider />
-      <Services data={dataServices} />
-      <Responsive />
-      <Clients data={dataClients} />
-      <FAQ data={dataFaq} />
-      <ButtonWhatsapp />
-      <Footer />
+      <LanguageProvider>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Escale Webs</title>
+          <link rel="canonical" href="https://escalewebs.online/contact" />
+        </Helmet>
+        <Header />
+        <Slider />
+        <Services data={dataServices} />
+        <InfinitySlider />
+        <TicketHome />
+        <Responsive />
+        <Clients data={dataClients} />
+        <FAQ data={dataFaq} />
+        <ButtonWhatsapp />
+        <Footer />
+      </LanguageProvider>
     </div>
   );
 };
