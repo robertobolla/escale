@@ -1,6 +1,6 @@
 ## Description
 
-"ESCALE" is a website created with HTML,CSS, SASS and Reactjs, with the aim of selling websites and ecommerces.
+"ESCALE" is a website created with HTML, SASS and Reactjs, with the aim of selling websites and ecommerces.
 
 ## AUTOR
 **Roberto Bolla**
